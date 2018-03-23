@@ -9,4 +9,6 @@ from pandas import  DataFrame, Series
 data_csv = pd.read_csv('E://Python//Code//Data//Happiness.csv')
 
 pvt = pd.pivot_table(data_csv, index = (['Region']), columns = 'Year', values= 'Happiness Score')
-print(pvt)
+print(type(pvt))
+
+pvt.to_csv('E://Python//Code//Data//pivot_happy.csv')
