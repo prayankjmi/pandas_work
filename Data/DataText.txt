@@ -1,0 +1,19 @@
+Finally, remember again that because keys no longer returns a list, the traditional coding
+pattern for scanning a dictionary by sorted keys won’t work in 3.X. Instead, convert
+keys views first with a list call, or use the sorted call on either a keys view or the
+dictionary itself, as follows. We saw this in Chapter 8, but it’s important enough to 2.X
+programmers making the switch to demonstrate again:
+>>> D
+{'a': 1, 'b': 2, 'c': 3}
+>>> for k in sorted(D.keys()): print(k, D[k], end=' ')
+...
+a 1 b 2 c 3
+>>> for k in sorted(D): print(k, D[k], end=' ') # "Best practice" key sorting
+...
+a 1 b 2 c 3
+Other Iteration Topics
+As mentioned in this chapter’s introduction, there is more coverage of both list comprehensions and iterables in Chapter 20, in conjunction with functions, and again in
+Chapter 30 when we study classes. As you’ll see later:
+• User-defined functions can be turned into iterable generator functions, with
+yield statements.
+• List comprehensi
